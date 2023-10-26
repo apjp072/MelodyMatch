@@ -1,14 +1,13 @@
 ﻿using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-
-    [ApiController]
-    [Route("api/[controller]")] //will use UserController as the route, /api/users
-    public class UsersController : ControllerBase
+    [Authorize] //want endpoints authenticated
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
 
@@ -24,7 +23,7 @@ namespace API.Controllers
             return users;
 
         }
-
+        
         [HttpGet("{id}")] // /api/users/2
         public async Task<ActionResult<AppUser>> GetUser(int id) //actionresult will return type AppUser
         { 
