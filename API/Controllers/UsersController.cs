@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [Authorize] //want endpoints authenticated
+    //[Authorize] //want endpoints authenticated
     public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
