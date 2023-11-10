@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-custom { /* learn more button */
+  background-color: #114B5F;
+  border: 2px solid transparent;
+  color: white;
+}
+.btn-custom:hover { /* learn more button */
+  background-color: white;
+  border: 2px solid #114B5F;
+  color: #114B5F;
+}
+
+.btn-primary { /* register button */
+  background-color: #f06c64 !important; 
+  border: 2px solid transparent;
+  color: white;
+}
+.btn-primary:hover { /* register button */
+  background-color: #DD534B !important; 
+  border: 2px solid #DD534B;
+  color: white;
+}
+
+.bg-primary { /* nav bar */
+    background-color: #f06c64 !important;
+} 
+
+.btn-outline-primary { /* login button */
+  background-color: #f06c64;
+  border: 1px solid white;
+  color: white;
+}
+.btn-outline-primary:hover { /* on hover */
+  background-color: white; 
+  border-color: white; 
+  color: #f06c64; 
+}
+
+.btn-success { /* register button 2 */
+  background-color: #2D9F98 !important; 
+  border: 2px solid transparent;
+  color: white;
+}
+.btn-success:hover { /* register button 2*/
+  background-color: #247F79 !important; 
+  border: 2px solid #247F79;
+  color: white;
+}
