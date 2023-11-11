@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="/" routerLinkActive="active">Melody Match</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <ng-container >
+            <ng-container *ngIf="(accountService.currentUser$ | async)">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
                 </li>
@@ -13,6 +13,9 @@
                     <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
                 </li>
             </ng-container>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/errors" routerLinkActive="active">Errors</a>
+            </li>
         </ul>
 
         
@@ -24,12 +27,7 @@
             </div>
         </div>
 
-        <form *ngIf="!(accountService.currentUser$ | async)" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
-            <input name="username" [(ngModel)]="model.username" class="form-control me-2" type="text"
-                placeholder="Username">
-            <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password"
-                placeholder="Password">
-            <button class="btn btn-outline-primary" type="submit">Login</button>
-        </form>
+        <button class="btn btn-outline-primary" *ngIf="showLoginButton() && !(accountService.currentUser$ | async)" routerLink="/login" routerLinkActive="active">Login</button>
+
     </div>
 </nav>

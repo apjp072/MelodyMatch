@@ -10,39 +10,68 @@
   color: #114B5F;
 }
 
-.btn-primary { /* register button */
-  background-color: #f06c64 !important; 
+
+/********** register button (primary) ***********/
+.btn-primary { 
+  background-color: #ff4a59 !important; 
   border: 2px solid transparent;
   color: white;
 }
-.btn-primary:hover { /* register button */
-  background-color: #DD534B !important; 
-  border: 2px solid #DD534B;
+.btn-primary:hover { /* on hover */
+  background-color: #e83a48 !important; 
+  border: 2px solid #e83a48;
+  color: white;
+}
+.btn-primary:active { /* on press */
+  background-color: #c21d2a !important; 
+  border: 2px solid #c21d2a !important;
   color: white;
 }
 
 .bg-primary { /* nav bar */
-    background-color: #f06c64 !important;
+    background-color: #ff4a59 !important;
 } 
+.text-primary {
+  color: #ff4a59 !important;
+}
 
-.btn-outline-primary { /* login button */
-  background-color: #f06c64;
+/********** login button (primary outline) ***********/
+.btn-outline-primary {
+  background-color: #ff4a59;
   border: 1px solid white;
   color: white;
 }
 .btn-outline-primary:hover { /* on hover */
   background-color: white; 
-  border-color: white; 
-  color: #f06c64; 
+  border-color: #ff4a59; 
+  color: #ff4a59; 
+}
+.btn-outline-primary:active { /* on press */
+  background-color: white !important; 
+  border-color: white !important; 
+  color: #ff4a59 !important; 
 }
 
-.btn-success { /* register button 2 */
+/********** register & login button 2 (success) ***********/
+.btn-success { 
   background-color: #2D9F98 !important; 
   border: 2px solid transparent;
   color: white;
 }
-.btn-success:hover { /* register button 2*/
+.btn-success:hover { /* on hover */
   background-color: #247F79 !important; 
   border: 2px solid #247F79;
   color: white;
+}
+.btn-success:active { /* on press */
+  background-color: #1A716C !important; 
+  border: 2px solid #1A716C !important;
+  color: white;
+}
+
+/********** default button (cancel) ***********/
+.btn-default { 
+  background-color: #ffffff !important; 
+  border: 2px solid transparent !important;
+  color: #114B5F;
 }

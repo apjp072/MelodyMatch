@@ -19,16 +19,14 @@ export class NavComponent implements OnInit {
 
   }
 
-  login() {
-    this.accountService.login(this.model).subscribe({
-      next: _ => this.router.navigateByUrl('/members'), //says were not using an argument for this particular method
-      error: error => this.toastr.error(error.error)
-    })
-  }
-
   logout() {
     this.accountService.logout();
     this.router.navigateByUrl('/')
+  }
+
+  showLoginButton(): boolean {
+    // Check if the user is logged out and the current URL is the login page
+    return this.router.url !== '/login';
   }
 
 }
