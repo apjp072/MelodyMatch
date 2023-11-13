@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bg-primary { /* nav bar */
+  background-color: #ff4a59 !important;
+} 
+.text-primary {
+color: #ff4a59 !important;
+}
+
+.text-light {
+  color: white !important;
+}
+
 .btn-custom { /* learn more button */
   background-color: #114B5F;
   border: 2px solid transparent;
@@ -9,7 +21,6 @@
   border: 2px solid #114B5F;
   color: #114B5F;
 }
-
 
 /********** register button (primary) ***********/
 .btn-primary { 
@@ -26,13 +37,6 @@
   background-color: #c21d2a !important; 
   border: 2px solid #c21d2a !important;
   color: white;
-}
-
-.bg-primary { /* nav bar */
-    background-color: #ff4a59 !important;
-} 
-.text-primary {
-  color: #ff4a59 !important;
 }
 
 /********** login button (primary outline) ***********/
