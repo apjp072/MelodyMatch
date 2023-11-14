@@ -1,0 +1,24 @@
+.card {
+    flex: none;
+    font-family: Arial, sans-serif !important; /* Example font family */
+    min-width: 200px; /* Minimum card size */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}
+
+.img-thumbnail {
+    margin: 20px;
+    width: 85%;
+    height: auto;
+}
+
+.card-body {
+    padding: 0 25px;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    background-color: #fff
+}
