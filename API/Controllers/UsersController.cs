@@ -1,4 +1,5 @@
-﻿using API.Data;
+﻿using System.Security.Claims;
+using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
@@ -35,5 +36,20 @@ namespace API.Controllers
             return await _userRepository.GetMemberAsync(username); //waiter waiting around in the kitchen for food to be ready
         }
     
+        [HttpPut]
+        public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto) //persisting the changes in the API
+        {
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var user = await _userRepository.GetUserByUsernameAsync(username);
+
+            if(user == null) return NotFound();
+
+            _mapper.Map(memberUpdateDto, user);
+
+            if (await _userRepository.SaveAllAsync()) return NoContent(); //nocontent is the proper return for an HttpPut
+
+            //if we haven't made any changes to the database
+            return BadRequest("Failed to update user");
+        }
     }
 }

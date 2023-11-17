@@ -8,6 +8,7 @@
     
 }
 
+
 .img-thumbnail {
     margin: 20px;
     width: 85%;
@@ -21,9 +22,4 @@
 .card-footer {
     padding: 10px 15px;
     background-color: #fff
-}
-
-.ngx-gallery {
-    display: inline-block;
-    margin-bottom: 20px;
 }

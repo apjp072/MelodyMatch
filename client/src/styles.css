@@ -69,7 +69,13 @@ color: #ff4a59 !important;
 }
 .btn-success:active { /* on press */
   background-color: #1A716C !important; 
-  border: 2px solid #1A716C !important;
+  border: 2px solid #7a7a7a !important;
+  color: white;
+}
+
+.btn-success:disabled { /* on press */
+  background-color: #ababab !important; 
+  border: 2px solid #ababab !important;
   color: white;
 }
 

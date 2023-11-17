@@ -1,5 +1,5 @@
 <div class="cards-container">
-    <div *ngFor="let member of members">
+    <div *ngFor="let member of members$ | async">
         <app-member-card [member]="member"></app-member-card>
     </div>
 </div>
