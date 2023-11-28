@@ -1,7 +1,7 @@
 # MelodyMatch
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-compatible-brightgreen.svg)
-![Angular](https://img.shields.io/badge/Angular-compatible-brightgreen.svg)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-used-blue.svg)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-v7.0-brightgreen.svg)
+![Angular](https://img.shields.io/badge/Angular-v16-brightgreen.svg)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-v5.2-blue.svg)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-integrated-blue.svg)
 ![SignalR](https://img.shields.io/badge/SignalR-enabled-blue.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/apjp072/WebApp1)
