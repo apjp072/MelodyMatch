@@ -1,0 +1,19 @@
+.nv-file-over {
+    border: dotted 3px red;
+}
+
+input[type=file] {
+    color: transparent
+}
+
+.btn-success {
+    background-color: #247F79 !important; 
+    border: 2px solid #247F79 !important;
+    color: white;
+}
+
+.btn-outline-success {
+    background-color: solid white; 
+    border: 1.5px solid #247F79;
+    color: #247F79;
+}

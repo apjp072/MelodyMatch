@@ -30,52 +30,35 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" 
-                [disabled]="!editForm.dirty" 
-                form="editForm" 
-                class="btn btn-success col-12">Save Changes</button>
+                <button type="submit" [disabled]="!editForm.dirty" form="editForm" class="btn btn-success col-12">Save
+                    Changes</button>
             </div>
         </div>
     </div>
-    <div class="col-1">
-        &nbsp;
-    </div>
-    <div class="col-7">
+    <div class="col-md-8">
         <tabset class="member-tabset">
             <tab heading="About Me">
                 <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
                     <h4 class="mt-2">Description</h4>
-                    <textarea class="form-control" 
-                        rows="6" 
-                        [(ngModel)]="member.introduction" 
-                        name="introduction">
+                    <textarea class="form-control" rows="6" [(ngModel)]="member.introduction" name="introduction">
                     </textarea>
                     <h4 class="mt-2">Looking for</h4>
-                    <textarea class="form-control" 
-                        rows="6" 
-                        [(ngModel)]="member.lookingFor" 
-                        name="lookingFor">
+                    <textarea class="form-control" rows="6" [(ngModel)]="member.lookingFor" name="lookingFor">
                     </textarea>
                     <h4 class="mt-2">Interests</h4>
-                    <textarea class="form-control" 
-                        rows="6" 
-                        [(ngModel)]="member.interests" 
-                        name="interests">
+                    <textarea class="form-control" rows="6" [(ngModel)]="member.interests" name="interests">
                     </textarea>
                     <h4 class="mt-2">Location Details: </h4>
                     <div class="d-flex flex-row align-items center">
                         <label for="city">City:</label>
                         <input type="text" [(ngModel)]="member.city" name="city" class="form-control mx-2">
-                        <label for="country">City:</label>
+                        <label for="country">Country:</label>
                         <input type="text" [(ngModel)]="member.country" name="country" class="form-control mx-2">
                     </div>
-
-                    
                 </form>
-
             </tab>
             <tab heading="Edit Photos">
-                <p>Photo Edit will go here</p>
+                <app-photo-editor [member]="member"></app-photo-editor>
             </tab>
 
         </tabset>
